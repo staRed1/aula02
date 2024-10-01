@@ -10,13 +10,18 @@ export default function App() {
       const respostaUsuario = await fetch('https://jsonplaceholder.typicode.com/todos');
       const dadosUsuario = await respostaUsuario.json();
       setUsuarios(dadosUsuario);
+
+                    = await fetch('https://jsonplaceholder.typicode.com/photos');
+        const dados =                ;
+        setFotos(dados);
+
     }
     buscarUsuario();
   }, []);
 
   return (
     <>
-      <h1>Usuário</h1>
+      <h1>Galeria de Fotos</h1>
       <ul>
         {Usuarios.map( usuario => (
           <li key={usuario.userId}>
